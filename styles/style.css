@@ -5,6 +5,9 @@ body {
   font-family: 'PT Sans', sans-serif;
   color: #fff; }
 
+.clear {
+  clear: both; }
+
 #wrap {
   display: table;
   position: fixed;
@@ -41,20 +44,34 @@ body {
 
 #answer {
   display: none;
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s; }
+
+div.icon {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
 
 div.logo {
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
   background: url(../img/logo_opacity.png) no-repeat center;
   background-size: 100% 100%; }
 
-div.icon {
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  background: url(../img/logo.png) no-repeat center; }
+div.icon-mother-in-law {
+  background: url(../img/icon_1.png) no-repeat center;
+  background-size: 100% 100%; }
+
+div.icon-father-in-law {
+  background: url(../img/icon_2.png) no-repeat center;
+  background-size: 100% 100%; }
+
+div.icon_unknown {
+  background: url(../img/icon_unknown.png) no-repeat center;
+  background-size: 100% 100%; }
 
 input {
   border: 1px solid transparent;
@@ -67,7 +84,8 @@ input {
   color: #000;
   width: 300px;
   padding: 10px 20px;
-  margin: 30px 0; }
+  margin: 30px 0;
+  text-align: center; }
 
 a.button {
   cursor: pointer;
@@ -86,6 +104,11 @@ a.button {
   a.button:hover {
     background-color: #03548B; }
 
+span.answer {
+  display: none;
+  padding: 20px;
+  font-size: 26px; }
+
 @media screen and (max-width: 600px) {
   #center-block #welcome_text span:nth-child(1) {
     font-size: 40px; }
@@ -94,10 +117,6 @@ a.button {
 
   a.button {
     margin: 10px; }
-
-  div.logo {
-    width: 200px;
-    height: 200px; }
 
   input {
     width: 200px; } }

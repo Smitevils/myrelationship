@@ -17,10 +17,16 @@ html(lang="ru")
 					span Привет!
 					span MyRelationship.ru - поможет быстро узнать кто кому кем приходится.
 				#search
-					div.logo
+					div.logo.icon
 					form
 						input(type="text", name="whois", placeholder="Кто кому кем приходится?")
-						a(class="button") Старт!
+						a(class="button check") Старт!
 				#answer
-					div.icon
-					span fgdgfdgdfhdfhdfhdfhdfhfjhgkhkhgjdfgreyfgjhynfvrvrvr
+					div#icon_answer.icon
+					span(class="answer mother-in-law") Тёща — мать жены
+					span(class="answer father-in-law") Тесть — отец жены
+					span(class="answer unknown") Такого кажется нет :(
+					.clear
+					a(class="button try-again") Еще...
+
+
