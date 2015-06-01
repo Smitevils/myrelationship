@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /*╨б╨╛╤З╨╡╤В╨░╨╜╨╕╤П ╤Ж╨▓╨╡╤В╨╛╨▓ - http://colorscheme.ru/#0441TnAt7w0w0*/
 body {
-  background: #E84C3D; }
+  background: #000;
+  font-family: 'PT Sans', sans-serif;
+  color: #fff; }
 
 #wrap {
   display: table;
@@ -16,5 +18,20 @@ body {
   margin: 0;
   text-align: center;
   vertical-align: middle;
-  color: #fff;
   overflow: auto; }
+  #center-block #welcome_text span:nth-child(1) {
+    display: none; }
+  #center-block #welcome_text span:nth-child(2) {
+    display: inline-block; }
+
+div.logo {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  background: url(../img/logo.png) no-repeat center; }
+
+div.icon {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  background: url(../img/logo.png) no-repeat center; }
