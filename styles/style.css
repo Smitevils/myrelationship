@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*╨б╨╛╤З╨╡╤В╨░╨╜╨╕╤П ╤Ж╨▓╨╡╤В╨╛╨▓ - http://colorscheme.ru/#0441TnAt7w0w0*/
 body {
-  background: #000;
+  background: #E84C3D;
   font-family: 'PT Sans', sans-serif;
   color: #fff; }
 
@@ -19,16 +19,34 @@ body {
   text-align: center;
   vertical-align: middle;
   overflow: auto; }
+  #center-block #welcome_text span {
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s; }
   #center-block #welcome_text span:nth-child(1) {
-    display: none; }
+    font-size: 120px; }
   #center-block #welcome_text span:nth-child(2) {
-    display: inline-block; }
+    font-size: 40px; }
+
+#search {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s; }
+
+#answer {
+  display: none;
+  opacity: 0; }
 
 div.logo {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   margin: 0 auto;
-  background: url(../img/logo.png) no-repeat center; }
+  background: url(../img/logo_opacity.png) no-repeat center;
+  background-size: 100% 100%; }
 
 div.icon {
   width: 250px;
