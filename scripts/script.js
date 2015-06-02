@@ -3,6 +3,10 @@ var interval_mini = 10; // Наименьший интервал
 var firstVisit; // Хранение данных из cookie
 var entered_text = ""; // То что ввели в инпут
 
+var motherInLaw = ["теща","тёща","мать жены","мама жены"];
+var fatherInLaw = ["тесть","отец жены","папа жены"];
+var grandmother = ["бабушка","бабка","бабуля","ба","жена деда","мать отца","мать матери"];
+
 /*** Блок функций запускающий стартовый экран ***/
 function startFunction() {
 	$('span:eq(0)').css("opacity","1");
@@ -72,13 +76,17 @@ function againFunction_3() {
 }
 /*** Проверка введенного текста ***/
 function checkEnteredText() {
-	entered_text = $('input').val();
-	if (entered_text == "Теща" || entered_text == "Тёща" || entered_text == "теща" || entered_text == "тёща" || entered_text == "ТЁЩА" || entered_text == "ТЕЩА" || entered_text == "Мать жены" || entered_text == "мать жены" || entered_text == "Мама жены" || entered_text == "мама жены") {
+	/* берем введенные данные */
+	entered_text = $('input').val().toLowerCase(); 
+	if ( motherInLaw.some( function(item){ return item == entered_text; } ) ) {
 		$('.mother-in-law').css("display","inline-block");
 		$('#icon_answer').addClass('icon-mother-in-law');
-	} else if (entered_text == "Тесть" || entered_text == "тесть" || entered_text == "ТЕСТЬ" || entered_text == "Отец жены" || entered_text == "отец жены" || entered_text == "Папа жены" || entered_text == "папа жены") {
+	} else if ( fatherInLaw.some( function(item){ return item == entered_text; } ) ) {
 		$('.father-in-law').css("display","inline-block");
 		$('#icon_answer').addClass('icon-father-in-law');
+	} else if ( grandmother.some( function(item){ return item == entered_text; } ) ) {
+		$('.grandmother').css("display","inline-block");
+		$('#icon_answer').addClass('icon-grandmother');
 	} else {
 		$('.unknown').css("display","inline-block");
 		$('#icon_answer').addClass('icon_unknown');

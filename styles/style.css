@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*╨б╨╛╤З╨╡╤В╨░╨╜╨╕╤П ╤Ж╨▓╨╡╤В╨╛╨▓ - http://colorscheme.ru/#0441TnAt7w0w0*/
 body {
-  background: #E84C3D;
+  background: #39ceff;
   font-family: 'PT Sans', sans-serif;
   color: #fff; }
 
@@ -67,6 +67,10 @@ div.icon-mother-in-law {
 
 div.icon-father-in-law {
   background: url(../img/icon_2.png) no-repeat center;
+  background-size: 100% 100%; }
+
+div.icon-grandmother {
+  background: url(../img/icon_3.png) no-repeat center;
   background-size: 100% 100%; }
 
 div.icon_unknown {
