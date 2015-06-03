@@ -18,6 +18,19 @@ var bratelnitsa = ["брательница","родственница двоюр
 var brothersWife = ["братова","жена брата"];
 var brothersSon = ["братыч","сын брата", "племянник по брату"];
 
+var genus = ["род","один предок","поколение","ряд поколений"]
+var parents = ["родители","отец","мать"]
+var parentFather = ["родитель"]
+var parentMother = ["родительница"]
+var home = ["родной","кровный","полнородный","одни родители"]
+var relatives = ["родственники","родня"]
+var patriarch = ["родоначальник","первый представитель рода"]
+var genealogy = ["родословие","генеалогия"]
+var ancestry = ["родословная"]
+var relative = ["родственник"]
+var relationship = ["родство","отношение между людьми"]
+
+
 /* матрица из массивов массивов */
 var matrix = [
 	motherInLaw,
@@ -32,7 +45,18 @@ var matrix = [
 	fraternization,
 	bratelnitsa,
 	brothersWife,
-	brothersSon
+	brothersSon,
+	genus,
+	parents,
+	parentFather,
+	parentMother,
+	home,
+	relatives,
+	patriarch,
+	genealogy,
+	ancestry,
+	relative,
+	relationship
 ];
 
 /*** Блок функций запускающий стартовый экран ***/
