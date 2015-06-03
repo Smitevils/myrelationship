@@ -45,6 +45,7 @@ body {
 #answer {
   display: none;
   opacity: 0;
+  padding: 0 300px;
   -webkit-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s; }
@@ -173,5 +174,7 @@ span.answer {
   input {
     width: 200px; }
 
-  #answer span {
-    font-size: 18px; } }
+  #answer {
+    padding: 0; }
+    #answer span {
+      font-size: 18px; } }

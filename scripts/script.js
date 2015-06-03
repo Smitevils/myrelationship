@@ -107,13 +107,13 @@ function checkEnteredText() {
 	/* берем введенные данные */
 	entered_text = $('input').val().toLowerCase();
 	/* цикл проверяет столько раз сколько элементов в матрице */
-	for (var i = 1; i < (matrix.length); i++) {
+	for (var i = 1; i < (matrix.length+1); i++) {
 		/* если (функциия) введенный текст совпадает с одним из элементов матрицы */
-		if (switchEntered(matrix[i])) {
+		if (switchEntered(matrix[i-1])) {
 			console.log("ok")
 			// задаем стили - i как индефикатор для составления селектора для выборки 
-			$('.span-'+(i+1)+'').css("display","inline-block");
-			$('#icon_answer').addClass('icon-'+(i+1)+'');
+			$('.span-'+(i)+'').css("display","inline-block");
+			$('#icon_answer').addClass('icon-'+(i)+'');
 			break;
 		} else if (i == (matrix.length - 1)) {
 			console.log("error")
