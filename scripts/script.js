@@ -7,6 +7,34 @@ var motherInLaw = ["теща","тёща","мать жены","мама жены"
 var fatherInLaw = ["тесть","отец жены","папа жены"];
 var grandmother = ["бабушка","бабка","бабуля","ба","жена деда","мать отца","мать матери"];
 
+var brother = ["брат","сын в отношении к другим детям одних родителей"];
+var brotherGodfather = ["брат крестный","сын крестного отца"];
+var brotherCrusade = ["брат крестовый","брат по кресту", "названый брат","Брат крестовый","обменявшиеся нательными крестами"];
+var cousin = ["братан"," брательник","двоюродный брат","кузен"];
+var nephewOfHisBrother = ["братанич","племянник по брату"];
+var wifeCousin = ["братаниха","жена двоюродного брата"];
+var fraternization = ["братанна","дочь брата", "племянница по брату"];
+var bratelnitsa = ["брательница","родственница двоюродная","двоюродная родственница","дальняя родственница","родственница дальняя"];
+var brothersWife = ["братова","жена брата"];
+var brothersSon = ["братыч","сын брата", "племянник по брату"];
+
+/* матрица из массивов массивов */
+var matrix = [
+	motherInLaw,
+	fatherInLaw,
+	grandmother,
+	brother,
+	brotherGodfather,
+	brotherCrusade,
+	cousin,
+	nephewOfHisBrother,
+	wifeCousin,
+	fraternization,
+	bratelnitsa,
+	brothersWife,
+	brothersSon
+];
+
 /*** Блок функций запускающий стартовый экран ***/
 function startFunction() {
 	$('span:eq(0)').css("opacity","1");
@@ -77,20 +105,28 @@ function againFunction_3() {
 /*** Проверка введенного текста ***/
 function checkEnteredText() {
 	/* берем введенные данные */
-	entered_text = $('input').val().toLowerCase(); 
-	if ( motherInLaw.some( function(item){ return item == entered_text; } ) ) {
-		$('.mother-in-law').css("display","inline-block");
-		$('#icon_answer').addClass('icon-mother-in-law');
-	} else if ( fatherInLaw.some( function(item){ return item == entered_text; } ) ) {
-		$('.father-in-law').css("display","inline-block");
-		$('#icon_answer').addClass('icon-father-in-law');
-	} else if ( grandmother.some( function(item){ return item == entered_text; } ) ) {
-		$('.grandmother').css("display","inline-block");
-		$('#icon_answer').addClass('icon-grandmother');
-	} else {
-		$('.unknown').css("display","inline-block");
-		$('#icon_answer').addClass('icon_unknown');
+	entered_text = $('input').val().toLowerCase();
+	/* цикл проверяет столько раз сколько элементов в матрице */
+	for (var i = 1; i < (matrix.length); i++) {
+		/* если (функциия) введенный текст совпадает с одним из элементов матрицы */
+		if (switchEntered(matrix[i])) {
+			console.log("ok")
+			// задаем стили - i как индефикатор для составления селектора для выборки 
+			$('.span-'+(i+1)+'').css("display","inline-block");
+			$('#icon_answer').addClass('icon-'+(i+1)+'');
+			break;
+		} else if (i == (matrix.length - 1)) {
+			console.log("error")
+			$('.unknown').css("display","inline-block");
+			$('#icon_answer').addClass('icon_unknown');
+		}
+	};
+	// Функция принимает на входе массив значений для сравнения и возвращает true или false
+	function switchEntered(i) {
+		var x = i.some( function(item){ return item == entered_text; } );
+		return x;
 	}
+	// Выводим экран ответа
 	setTimeout(answerFunction, interval_mini);
 }
 

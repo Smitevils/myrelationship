@@ -1,7 +1,7 @@
 doctype html
 html(lang="ru")
 	head
-		title MyRelationship.ru - Узнай кто кому кем является!
+		title MyRelationship.ru - Мои Родственные Связи - Узнай кто кому кем является!
 		link(type='text/css', rel='stylesheet', href='styles/normalize.css')
 		link(type='text/css', rel='stylesheet', href='styles/style.css')
 		script(src='scripts/jquery-2.1.4.min.js')
@@ -21,10 +21,22 @@ html(lang="ru")
 					input(type="text", name="whois", placeholder="Кто кому кем приходится?")
 					a(class="button check") Старт!
 				#answer
-					div#icon_answer.icon
-					span(class="answer mother-in-law") Тёща — мать жены
-					span(class="answer father-in-law") Тесть — отец жены
-					span(class="answer grandmother") Бабушка — мать отца или матери, жена деда 
+					div#icon_answer
+					span(class="answer span-1") Тёща — мать жены
+					span(class="answer span-2") Тесть — отец жены
+					span(class="answer span-3") Бабушка — мать отца или матери, жена деда
+
+					span(class="answer span-4") Брат - сын в отношении к другим детям одних родителей
+					span(class="answer span-5") Брат крестный — сын крестного отца 
+					span(class="answer span-6") Брат крестовый, брат по кресту, названый брат — лица, обменявшиеся нательными крестами 
+					span(class="answer span-7") Братан, брательник — двоюродный брат
+					span(class="answer span-8") Братанич — племянник по брату
+					span(class="answer span-9") Братаниха — жена двоюродного брата
+					span(class="answer span-10") Братанна — дочь брата, племянница по брату
+					span(class="answer span-11") Брательница — родственница двоюродная или дальняя
+					span(class="answer span-12") Братова — жена брата
+					span(class="answer span-13") Братыч — сын брата, племянник по брату
+
 					span(class="answer unknown") Такого кажется нет :(
 					.clear
 					a(class="button try-again") Еще...
