@@ -115,7 +115,7 @@ function checkEnteredText() {
 			$('.span-'+(i)+'').css("display","inline-block");
 			$('#icon_answer').addClass('icon-'+(i)+'');
 			break;
-		} else if (i == (matrix.length - 1)) {
+		} else if (i == (matrix.length)) {
 			console.log("error")
 			$('.unknown').css("display","inline-block");
 			$('#icon_answer').addClass('icon_unknown');
