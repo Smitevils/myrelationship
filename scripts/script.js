@@ -2,6 +2,7 @@ var interval = 2000; // Большой интервал
 var interval_mini = 10; // Наименьший интервал
 var firstVisit; // Хранение данных из cookie
 var entered_text = ""; // То что ввели в инпут
+var switch_settings = false; // Переключатель для кнопки настроек
 
 var motherInLaw = ["теща","тёща","мать жены","мама жены"];
 var fatherInLaw = ["тесть","отец жены","папа жены"];
@@ -84,19 +85,23 @@ function startFunction_5() {
 function startFunction_6() {
 	$('span:eq(1)').css("display","none");
 	$('#search').css("display","block");
+	$('.gear').css("display","block"); // Проявляем кнопку настроек
 	setTimeout(startFunction_7, interval_mini);
 }
 function startFunction_7() {
 	$('#search').css("opacity","1");
+	$('.gear').css("opacity","0.5"); // Проявляем кнопку настроек
 }
 /*** Блок функций - переход от стартового экрана к экрану запроса ***/
 function mainFunction() {
 	$('#welcome_text').css("display","none");
 	$('#search').css("display","block");
+	$('.gear').css("display","block"); // Проявляем кнопку настроек
 	setTimeout(mainFunction_2, interval_mini);
 }
 function mainFunction_2() {
 	$('#search').css("opacity","1");
+	$('.gear').css("opacity","0.5"); // Проявляем кнопку настроек
 }
 /*** Блок функций - переход от экрана запроса к экрану ответа ***/
 function answerFunction() {
@@ -124,6 +129,39 @@ function againFunction_2() {
 	setTimeout(againFunction_3, interval_mini);
 }
 function againFunction_3() {
+	$('#search').css("opacity","1");
+}
+
+// Функция переключателя
+function switchSettings() { 
+	switch_settings = !switch_settings;
+}
+/*** Блок функций - переход от экрана запроса или ответа к экрану настроек - Вкл. ***/
+function settingsFunctionOn() {
+	$('#search').css("opacity","0");
+	$('#answer').css("opacity","0");
+	setTimeout(settingsFunctionOn_2, interval);
+}
+function settingsFunctionOn_2() {
+	$('#search').css("display","none");
+	$('#answer').css("display","none");
+	$('#settings').css("display","block");
+	setTimeout(settingsFunctionOn_3, interval_mini);
+}
+function settingsFunctionOn_3() {
+	$('#settings').css("opacity","1");
+}
+/*** Блок функций - переход от экрана настроек к экрану запроса - Выкл. ***/
+function settingsFunctionOff() {
+	$('#settings').css("opacity","0");
+	setTimeout(settingsFunctionOff_2, interval);
+}
+function settingsFunctionOff_2() {
+	$('#search').css("display","block");
+	$('#settings').css("display","none");
+	setTimeout(settingsFunctionOff_3, interval_mini);
+}
+function settingsFunctionOff_3() {
 	$('#search').css("opacity","1");
 }
 /*** Проверка введенного текста ***/
@@ -172,6 +210,16 @@ $(function() {
 	});
 	$('input').blur(function(){
 		$('.logo').css({'width':'200px','height':'200px'})
+	});
+	/* Обработчик клика по кнопке настроек */
+	$('.gear').click(function(event) {
+		switchSettings();
+		if (switch_settings) {
+			settingsFunctionOn();
+		} else {
+			$('input').val("");
+			settingsFunctionOff()
+		}
 	});
 	/* Обработчик клика по кнопке поиска */
 	$('a.check').click(function(event) {
