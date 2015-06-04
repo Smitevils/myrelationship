@@ -159,6 +159,8 @@ function settingsFunctionOff() {
 function settingsFunctionOff_2() {
 	$('#search').css("display","block");
 	$('#settings').css("display","none");
+	$('#icon_answer').removeClass().addClass('icon');
+	$('.answer').css('display','none');
 	setTimeout(settingsFunctionOff_3, interval_mini);
 }
 function settingsFunctionOff_3() {
@@ -192,6 +194,19 @@ function checkEnteredText() {
 	setTimeout(answerFunction, interval_mini);
 }
 
+/* Очищаем поле ответа */
+function clearAnswer() {
+	$('input').val("");
+	/*$('.answer').css('display','none');
+	$('#icon_answer').removeClass();
+	$('.unknown').css('display','none');
+	var x = $('.answer').length;
+	for (var i = 0; i < x; i++) {
+		$('.span-'+i+'').css('display','none');
+		$('.span-'+i+'').removeClass().addClass('span-'+i+'');
+	};*/
+}
+
 /*** Основные - после загрузки страницы ***/
 $(function() {
 	firstVisit = $.cookie('firstVisit'); // берем данные из куки
@@ -217,8 +232,8 @@ $(function() {
 		if (switch_settings) {
 			settingsFunctionOn();
 		} else {
-			$('input').val("");
-			settingsFunctionOff()
+			clearAnswer();
+			settingsFunctionOff();
 		}
 	});
 	/* Обработчик клика по кнопке поиска */
