@@ -31,6 +31,20 @@ var ancestry = ["родословная"]
 var relative = ["родственник"]
 var relationship = ["родство","отношение между людьми"]
 
+var widow = ["вдова"]
+var widower = ["вдовец"]
+var sisterGrandfather = ["великая тетка","сестра деда","сестра дедушки","сестра бабки","сестра бабушки","двоюродная бабка","двоюродная бабушка"]
+var greatUncle = ["великий дядя","брат деда","брат дудушки","брат бабушки","брат бабки", "бабушкин брат", "бабкин брат","дедушкин брат"]
+var branch = ["ветвь","линия родства"]
+var grandson = ["внук","сын сына","сын дочери","сыновья племянника","сыновья племянницы"]
+var greatGreatNiece = ["внучатая двоюродная племянница","внучка двоюродного брата","внучка двоюродной сестры"]
+var greatNiece = ["внучатая племянница","внучка брата","внучка сестры","троюродная племянница"]
+var grand_ = ["внучатый","троюродный"]
+var secondCousin = ["троюродный брат","троюродная сестра"]
+var greatGreatNephew = ["внучатый двоюродный племянник","внук двоюродного брата","внук двоюродной сестры"]
+var grandsonBrother = ["внучатый племянник","внук брата","внук сестры"]
+var greatNephewTwiceRemoved = ["внучатый троюродный племянник","внук троюродного брата","внук троюродной сестры","троюродный племянник"]
+var granddaughter = ["внучка","внука","дочь сына","дочь дочери","дочь племянника","дочь племянницы"]
 
 /* матрица из массивов массивов */
 var matrix = [
@@ -57,7 +71,22 @@ var matrix = [
 	genealogy,
 	ancestry,
 	relative,
-	relationship
+	relationship,
+	//
+	widow,
+	widower,
+	sisterGrandfather,
+	greatUncle,
+	branch,
+	grandson,
+	greatGreatNiece,
+	greatNiece,
+	grand_,
+	secondCousin,
+	greatGreatNephew,
+	grandsonBrother,
+	greatNephewTwiceRemoved,
+	granddaughter
 ];
 
 /*** Блок функций запускающий стартовый экран ***/
