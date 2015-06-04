@@ -46,13 +46,13 @@ body {
   background: url(../img/gear_64.png) no-repeat center;
   background-size: 100% 100%;
   cursor: pointer;
-  -webkit-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s; }
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
   .gear:hover {
-    opacity: 1; }
+    opacity: 1 !important; }
   .gear:active {
-    opacity: 1; }
+    opacity: 1 !important; }
 
 #search {
   display: none;
