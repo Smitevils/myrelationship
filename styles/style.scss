@@ -54,10 +54,17 @@ body {background: #39ceff; font-family: 'PT Sans', sans-serif; color: #fff;}
 	transition: opacity 1s;
 }
 #settings {
-	display: none; opacity: 0;
+	width: 260px; margin: 0 auto;
+	display: none; opacity: 0; 
 	-webkit-transition: opacity 1s;
 	-o-transition: opacity 1s;
 	transition: opacity 1s;
+	a {
+		color: #fff;
+		font-size: 18px;
+		font-weight: bold;
+		text-decoration: none;
+	}
 }
 
 div.icon {
@@ -119,6 +126,31 @@ div.logo {
 .icon-36 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
 .icon-37 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
 .icon-38 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+
+.icon-39 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-40 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-41 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-42 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-43 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-44 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-45 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-46 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-47 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-48 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-49 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-50 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-51 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-52 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-53 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-54 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-55 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-56 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-57 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-58 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-59 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-60 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-61 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
+.icon-62 {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
 
 .icon_unknown {background: url(../img/icon_unknown.png) no-repeat center;background-size: 100% 100%;}
 
