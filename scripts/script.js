@@ -474,6 +474,8 @@ function checkEnteredText() {
 			console.log("error")
 			$('.unknown').css("display","inline-block");
 			$('#icon_answer').addClass('icon_unknown');
+			/*Если слово не найдено отправляем письмо на проверку*/
+			sentAjaxToMail();
 		}
 	};
 	// Функция принимает на входе массив значений для сравнения и возвращает true или false
@@ -543,3 +545,24 @@ $(function() {
 		setTimeout(againFunction, interval_mini);
 	});
 });
+$(document).ready(function() {
+	/*Скрываем счетчик liveinternet*/
+	$('[href="//www.liveinternet.ru/click"]').hide('fast', function() {
+		console.log("Hide liveinternet counter - feel god :)")
+	});;
+});
+
+/* Отправка сообщения */
+function sentAjaxToMail() {
+	/* Ajax */
+	$.ajax({
+		type: "POST",
+		url: "scripts/mail.php",
+		data: {
+			text: entered_text
+		},
+		success: function(data) {
+			console.log("Words sent for review...")
+		}
+	});
+}

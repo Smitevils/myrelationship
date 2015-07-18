@@ -27,9 +27,9 @@
 			<!-- Ф--><span class="answer span-182">Фамилия — то же, что род, семья</span>
 			<!-- Ч--><span class="answer span-183">Четвероюродная бабушка — троюродная сестра деда или бабушки</span><span class="answer span-184">Четвероюродная племянница — дочь четвероюродного брата или сестры</span><span class="answer span-185">Четвероюродная прабабушка — троюродная сестра прадеда или прабабушки</span><span class="answer span-186">Четвероюродная прапрабабушка — троюродная сестра прапрадеда или прабабушки</span><span class="answer span-187">Четвероюродная сестра — дочь троюродного дяди (тетки)</span><span class="answer span-188">Четвероюродная тетя — четвероюродная сестра отца или матери</span><span class="answer span-189">Четвероюродный — являющийся родственником в четвертом колене по прадеду</span><span class="answer span-190">Четвероюродный брат — сын троюродного дяди (тетки)</span><span class="answer span-191">Четвероюродный дед — троюродный брат деда или бабушки</span><span class="answer span-192">Четвероюродный дядя — четвероюродный брат отца или матери</span><span class="answer span-193">Четвероюродный племянник — сын четвероюродного брата или сестры</span><span class="answer span-194">Четвероюродный прадед — троюродный брат прадеда или прабабушки</span><span class="answer span-195">Четвероюродный прапрадед — троюродный брат прапрадеда</span>
 			<!-- Ш--><span class="answer span-196">Шестиюродный — являющийся родственником в шестом колене (по прапрапрапрадеду)</span><span class="answer span-197">Шурин — брат жены</span><span class="answer span-198">Шурич — сын шурина (брата жены)</span>
-			<!-- Я--><span class="answer span-199">Ятров (ятровка) — жена деверя (брата мужа)</span><span class="answer unknown">Такого кажется нет :(</span>
+			<!-- Я--><span class="answer span-199">Ятров (ятровка) — жена деверя (брата мужа)</span><span class="answer unknown">Такого кажется нет :(<br>Но, в скором времени, мы добавим твой вариант :)</span>
 			<div class="clear"></div><a class="button try-again">Еще...</a>
 		</div>
-		<div id="settings"><a href="http://smitevils.ru/" target="_blank">SmiteVils created</a><br>v 1.0</div>
+		<div id="settings"><a href="http://smitevils.ru/" target="_blank">SmiteVils created</a><br>v 1.1</div>
 	</div>
 </div>
